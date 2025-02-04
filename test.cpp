@@ -10,12 +10,11 @@ vector<string> possibleChanges(vector<string> usernames)
     {
         bool canChange = false;
 
-        // If there exists a smaller character later in the string, return "YES"
         for (int i = 0; i < username.size(); i++)
         {
             for (int j = i + 1; j < username.size(); j++)
             {
-                if (username[i] > username[j]) // A smaller character appears later
+                if (username[i] > username[j])
                 {
                     canChange = true;
                     break;
@@ -35,7 +34,7 @@ int main()
 {
     int usernames_count;
     cin >> usernames_count;
-    cin.ignore(); // To handle newline character
+    cin.ignore();
 
     vector<string> usernames(usernames_count);
     for (int i = 0; i < usernames_count; i++)
